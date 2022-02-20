@@ -1,0 +1,26 @@
+{% extends 'complements/base.html' %}
+
+{% block content %}
+
+	<h1>Hello {{ first_name }}</h1>
+
+	<p>{{ stuff|title }}</p>
+
+	<h3>Things:</h3>
+
+	{% for thing in things_list %}
+		
+		{% if thing == 41 %}
+			{{ thing + 100 }}<br/>
+		{% else %}
+			{{ thing }}<br/>
+		{% endif %}
+
+		
+	{% endfor %}
+
+	<br/><br/>
+	
+
+
+{% endblock %}
